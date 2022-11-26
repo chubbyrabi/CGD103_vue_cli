@@ -1,0 +1,152 @@
+
+/* ----- 通用設定 ----- */
+body{
+    position: relative;
+    height: 2000px;
+    /* padding-top: calc(6% + 30px); */
+    /* font-size: 0; */
+    /* 去除各種間隙與 h1(logo) 文字 */
+}
+img{
+    width: 100%;
+    vertical-align:top;
+}
+svg{
+    width: 100%;
+    height: 100%;
+    fill: var(--clr-fill);
+    transition: var(--hvr-transition);
+}
+a{
+    color: var(--clr-color);
+    text-decoration: none;
+}
+span{
+    color: var(--clr-color);
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+}
+
+/* ----- icon 設定 ----- */
+.icon{
+    display: inline-block;
+    --icon-width: 25px;
+    --icon-height: 25px;
+    width:  var(--icon-width);
+    height: var(--icon-height);
+}
+.icon:not(:last-child){
+    margin-right: 20px;
+}
+.icon svg{
+    width:  var(--icon-width);
+    height: var(--icon-height);
+    transform: scale(1);
+}
+
+
+
+header{
+    width: 100%;
+    /* position: fixed; */
+    top: 0;
+    /* background-color: #fff; */
+    background-color: #F8F8F8;
+    transition: 1s; 
+}
+/* header.js-hd-shadow{
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+} */
+.navbar{
+    padding: 2% 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-logo svg{
+    height: 30px;
+    width: auto;
+}
+.main-nav{
+    max-width: 1400px;
+    margin: auto;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.nav-list{
+    display: none;
+}
+.main-nav div{
+    
+}
+
+/* ----- hb-animation ----- */
+.nav-hb{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+}
+.nav-hb span{
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2.4px;
+    transform: rotate(0deg);
+    transition: 0.3s;
+    background-color: #333;
+}
+.nav-hb span:nth-child(1){
+    top: 3.8px;
+}
+.nav-hb span:nth-child(2){
+    top: 13.8px;
+    opacity: 1;
+}
+.nav-hb span:nth-child(3){
+    top: 23.8px;
+}
+.js-click.on.nav-hb span{
+    position: absolute;
+    background-color: #fff;
+    transition: 0.3s;
+}
+.js-click.on.nav-hb span:nth-child(1){
+    top: 13.8px;
+    transform: rotate(45deg);
+}
+.js-click.on.nav-hb span:nth-child(2){
+    opacity: 0;
+}
+.js-click.on.nav-hb span:nth-child(3){
+    top: 13.8px;
+    transform: rotate(-45deg);
+}
+
+
+/* ----- footer ----- */
+.footer-logo svg{
+    height: 80px;
+    width: auto;
+}
+
+
+@media screen and (min-width: 1200px){
+    .nav-list{
+        display: flex;
+        align-items: center;
+    }
+    .nav-list li+li{
+        margin-left: 40px;
+    }
+    .nav-hb{
+        display: none;
+    }
+}

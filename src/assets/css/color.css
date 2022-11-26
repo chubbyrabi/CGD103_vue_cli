@@ -1,0 +1,110 @@
+/* ----- 顏色設定 ----- */
+.clr-gray333{
+    --clr-color:#333;
+    --clr-fill: #333;
+}
+.clr-gray666{
+    --clr-color:#666;
+    --clr-fill: #666;
+}
+.clr-gray80{
+    --clr-color:#808080;
+    --clr-fill: #808080;
+}
+.clr-white{
+    --clr-color:#fff;
+    --clr-fill: #fff;
+}
+.clr-teal{
+    --clr-color:#00ADBB;
+    --clr-fill: #00ADBB;
+}
+.clr-teal60{
+    --clr-color:#66CED6;
+    --clr-fill: #66CED6;
+}
+.clr-teal30{
+    --clr-color:#B3E6EB;
+    --clr-fill: #B3E6EB;
+}
+.bgd--white{
+    --bgd-color: #fff;
+}
+.bgd-F6F8FB{
+    --bgd-color: #F6F8FB;
+}
+.bgd-E6E6E6{
+    --bgd-color: #E6E6E6;
+}
+
+
+
+/* ----- hvr 效果設定 ----- */
+.hvr-gray333{
+    --hvr-color: #333;
+    --hvr-fill:  #333;
+}
+.hvr-grayE6{
+    --hvr-color: #E6E6E6;
+    --hvr-fill:  #E6E6E6;
+}
+.hvr-grayF6F8FB{
+    --hvr-color: #F6F8FB;
+    --hvr-fill:  #F6F8FB;
+}
+.hvr-white{
+    --hvr-color: #fff;
+    --hvr-fill:  #fff;
+}
+.hvr-teal{
+    --hvr-color: #00ADBB;
+    --hvr-fill:  #00ADBB;
+}
+.hvr-teal60{
+    --hvr-color: #66CED6;
+    --hvr-fill:  #66CED6;
+}
+.hvr-teal30{
+    --hvr-color: #B3E6EB;
+    --hvr-fill:  #B3E6EB;
+}
+.hvr-none{
+    --hvr-color: none;
+    --hvr-fill:  none;
+}
+.hvr-bgd-white{
+    --hvr-bgd-color: #fff;
+}
+.hvr-bgd-F6F8FB{
+    --hvr-bgd-color: #F6F8FB;
+}
+.hvr-bgd-E6E6E6{
+    --hvr-bgd-color: #E6E6E6;
+}
+.hvr-op06{
+    --hvr-opacity: 0.6;
+}
+.hvr-bri095{
+    --hvr-bri: brightness(.95);
+}
+.hvr-1s{
+    --hvr-transition: 1s;
+}
+.hvr-05s{
+    --hvr-transition: 0.5s;
+}
+.hvr-03s{
+    --hvr-transition: 0.3s;
+}
+.hvr-015s{
+    --hvr-transition: 0.15s;
+}
+.hvr-scale11{
+    --hvr-scale: scale(1.1);
+}
+.hvr-scale12{
+    --hvr-scale: scale(1.2);
+}
+.hvr-pointer{
+    cursor: pointer;
+}

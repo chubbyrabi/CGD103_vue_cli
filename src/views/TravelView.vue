@@ -1,7 +1,7 @@
 <template>
 
-	<div class="about clr-gray333 font fontSize48">
-		<h1>This is an about page</h1>
+	<div class="travel clr-gray333 font fontSize48">
+		<h1>This is an travel page</h1>
 	</div>
 	
 </template>
@@ -11,7 +11,7 @@
 // import Footer from '@/components/Footer.vue'
 
 export default {
-	name: 'HomeView',
+name: 'HomeView',
 	components: {
 		// Header,
 		// Footer

@@ -1,9 +1,9 @@
 <template>
 
-	<div class="about clr-gray333 font fontSize48">
-		<h1>This is an about page</h1>
+	<div class="trains clr-gray333 font fontSize48">
+		<h1>This is an trains page</h1>
 	</div>
-	
+
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
 
-	<div class="about clr-gray333 font fontSize48">
-		<h1>This is an about page</h1>
+	<div class="booking clr-gray333 font fontSize48">
+		<h1>This is an booking page</h1>
 	</div>
 	
 </template>
