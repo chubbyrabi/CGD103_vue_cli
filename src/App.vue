@@ -1,10 +1,9 @@
 <template>
-	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
 	<Header/>
 	<div class="shop clr-gray333 font fontSize48">
 		<h1>This is an page</h1>
 	</div>
-	<Footer msg="Welcome to Your Vue.js App"/>
+	<Footer/>
 	<router-view/>
 </template>
 
@@ -24,6 +23,7 @@ export default {
 <style lang="scss">
 
 @import "./assets/css/reset.css";
+@import "./assets/css/style.css";
 @import "./assets/css/common.css";
 @import "./assets/css/color.css";
 @import "./assets/css/font.css";

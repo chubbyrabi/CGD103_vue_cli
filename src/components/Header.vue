@@ -45,6 +45,12 @@
 <script>
     export default {
         name: 'Header',
-    
+        // props: {
+        // },
+        // data(){
+        //     return{
+        //         items:["列車介紹","行程介紹","預約報名","消息專區","消息專區","關於我們"],
+        //     }
+        // }    
     }
 </script>
