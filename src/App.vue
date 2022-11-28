@@ -23,12 +23,8 @@ export default {
 <style lang="scss">
 
 @import "./assets/css/reset.css";
-@import "./assets/css/style.css";
-@import "./assets/css/common.css";
-
-@import "./assets/sass/base/font";
-@import "./assets/sass/base/color";
-@import "./assets/sass/components/btn";
+@import "./assets/css/common.css"; //待改寫
+@import "./assets/sass/style.scss";
 
 #app {
 	font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -37,17 +33,4 @@ export default {
 	text-align: center;
 	// color: #2c3e50;
 }
-
-// nav {
-// 	padding: 30px;
-// 	a {
-// 		font-weight: bold;
-// 		color: #2c3e50;
-
-// 		&.router-link-exact-active {
-// 		//   color: #42b983;
-// 			color: #CC8D1B;
-// 		}
-// 	}
-// }
 </style>

@@ -64,25 +64,29 @@ body {
 
 .btn-danger_2nd, .btn-danger, .btn-success_2nd, .btn-success, .btn-gold_2nd, .btn-gold, .btn-blue_2nd, .btn-blue {
   cursor: pointer;
-  transition: 0.2s;
   text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
   letter-spacing: 0.15em;
+  transition: 0.2s;
+}
+
+.btn-danger_2nd, .btn-danger, .btn-success_2nd, .btn-success, .btn-gold_2nd, .btn-gold, .btn-blue_2nd, .btn-blue {
   padding: 10px 50px;
-  font: 700 18px "Noto Serif TC";
+  font-weight: 700;
+  font-size: 18px;
+  font-family: "Noto Serif TC";
 }
 @media screen and (max-width: 767px) {
   .btn-danger_2nd, .btn-danger, .btn-success_2nd, .btn-success, .btn-gold_2nd, .btn-gold, .btn-blue_2nd, .btn-blue {
     padding: 8px 25px;
   }
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .btn-danger_2nd, .btn-danger, .btn-success_2nd, .btn-success, .btn-gold_2nd, .btn-gold, .btn-blue_2nd, .btn-blue {
-    font: 700 16px "Noto Serif TC";
+    font-weight: 700;
+    font-size: 16px;
   }
-}
-.btn-danger_2nd:disabled, .btn-danger:disabled, .btn-success_2nd:disabled, .btn-success:disabled, .btn-gold_2nd:disabled, .btn-gold:disabled, .btn-blue_2nd:disabled, .btn-blue:disabled {
-  background: #E6E6E6;
-  color: #888888;
 }
 
 .btn-blue {
@@ -98,9 +102,12 @@ body {
 .btn-blue:active {
   background: #2D3740;
 }
-.btn-blue:focus {
+.btn-blue:focus-visible {
   border-radius: 8px;
   outline: 3px solid #A3AFBF;
+}
+.btn-blue :focus:not(:focus-visible) {
+  outline: none;
 }
 .btn-blue:disabled {
   background: #E6E6E6;
@@ -120,9 +127,12 @@ body {
 .btn-gold:active {
   background: #CC8D1B;
 }
-.btn-gold:focus {
+.btn-gold:focus-visible {
   border-radius: 8px;
   outline: 3px solid #EBDFCE;
+}
+.btn-gold :focus:not(:focus-visible) {
+  outline: none;
 }
 .btn-gold:disabled {
   background: #E6E6E6;
@@ -143,10 +153,13 @@ body {
 .btn-blue_2nd:active {
   background: #2D3740;
 }
-.btn-blue_2nd:focus {
-  border: none;
+.btn-blue_2nd:focus-visible {
+  border: transparent;
   border-radius: 8px;
   outline: 3px solid #A3AFBF;
+}
+.btn-blue_2nd :focus:not(:focus-visible) {
+  outline: none;
 }
 .btn-blue_2nd:disabled {
   background: #E6E6E6;
@@ -167,10 +180,13 @@ body {
 .btn-gold_2nd:active {
   background: #CC8D1B;
 }
-.btn-gold_2nd:focus {
-  border: none;
+.btn-gold_2nd:focus-visible {
+  border: transparent;
   border-radius: 8px;
   outline: 3px solid #EBDFCE;
+}
+.btn-gold_2nd :focus:not(:focus-visible) {
+  outline: none;
 }
 .btn-gold_2nd:disabled {
   background: #E6E6E6;
@@ -184,15 +200,18 @@ body {
   border-radius: 10px;
 }
 .btn-success:hover {
-  background: #547242;
+  background: #86ab6f;
   transition: 0.2s;
 }
 .btn-success:active {
   background: #6C9255;
 }
-.btn-success:focus {
+.btn-success:focus-visible {
   border-radius: 8px;
-  outline: 3px solid #6C9255;
+  outline: 3px solid #547242;
+}
+.btn-success :focus:not(:focus-visible) {
+  outline: none;
 }
 .btn-success:disabled {
   background: #E6E6E6;
@@ -206,15 +225,18 @@ body {
   border-radius: 10px;
 }
 .btn-danger:hover {
-  background: #660c0c;
+  background: #c21616;
   transition: 0.2s;
 }
 .btn-danger:active {
   background: #941111;
 }
-.btn-danger:focus {
+.btn-danger:focus-visible {
   border-radius: 8px;
-  outline: 3px solid #941111;
+  outline: 3px solid #660c0c;
+}
+.btn-danger :focus:not(:focus-visible) {
+  outline: none;
 }
 .btn-danger:disabled {
   background: #E6E6E6;
@@ -233,12 +255,15 @@ body {
   transition: 0.2s;
 }
 .btn-success_2nd:active {
-  background: #6C9255;
+  background: #547242;
 }
-.btn-success_2nd:focus {
-  border: none;
+.btn-success_2nd:focus-visible {
+  border: transparent;
   border-radius: 8px;
   outline: 3px solid #547242;
+}
+.btn-success_2nd :focus:not(:focus-visible) {
+  outline: none;
 }
 .btn-success_2nd:disabled {
   background: #E6E6E6;
@@ -257,12 +282,15 @@ body {
   transition: 0.2s;
 }
 .btn-danger_2nd:active {
-  background: #941111;
+  background: #660c0c;
 }
-.btn-danger_2nd:focus {
-  border: none;
+.btn-danger_2nd:focus-visible {
+  border: transparent;
   border-radius: 8px;
   outline: 3px solid #660c0c;
+}
+.btn-danger_2nd :focus:not(:focus-visible) {
+  outline: none;
 }
 .btn-danger_2nd:disabled {
   background: #E6E6E6;
