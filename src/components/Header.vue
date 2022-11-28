@@ -9,7 +9,7 @@
                     </svg>
                 </router-link>
             </h1>
-            <ul class="nav-list font fontSize16-15em">
+            <ul class="nav-list font-16-15em">
                 <li>
                     <router-link to="/trains">列車介紹</router-link>
                 </li>
@@ -41,6 +41,25 @@
         </nav>
     </header>
 </template>
+
+
+<style lang="scss">
+
+@import "src/assets/sass/base/font";
+@import "src/assets/sass/components/_btn.scss";
+
+.nav-logo svg, .nav-list li{
+    color: $clr_gray_L1;
+    fill: $clr_gray_L1;
+    transition: 0.3s;
+}
+.nav-logo svg:hover, .nav-list li:hover{
+    color: $clr_blue_L3;
+    fill: $clr_blue_L3;
+    transition: 0.3s;
+}
+
+</style>
 
 <script>
     export default {
