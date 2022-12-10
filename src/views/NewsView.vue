@@ -1,9 +1,10 @@
 <template>
+	{{$route.params}}
 		<div class="news clr-gray333 font fontSize48">
 			<h1>This is an news page</h1>
 		</div>
-		<!-- <Bar/> -->
-		<!-- <button class="btn-blue" v-on:click="counter += 1">點擊:counter = {{counter}}</button> -->
+		<Bar/>
+		<button class="btn-blue" v-on:click="counter += 1">點擊:counter = {{counter}}</button>
 		<button class="btn-blue" @click="counter += 1">點擊:counter = {{counter}}</button>
 		<button class="btn-gold" @click="btnEvent">點我</button>
 		<button class="btn-success" @click="btnSay('說話了')">說話</button>
@@ -14,8 +15,24 @@
             </li>
         </ul>
 
+		<div class="news"
+			:style="{
+				backgroundColor: activeClr,
+			}"
+				>
+			<img :src="require(`@/assets/logo.png`)">
+			<button
+				v-for="i in colors" :key="i"
+				:style="{
+					backgroundColor: i,
+				}"
+				:class="{active: activeClr === i}"
+				@click="changeClr(i)"
+			>{{i}}</button>
+		</div>
 
-		<!-- <Space wrap>
+
+		<Space wrap>
         <Circle :percent="80">
             <span class="demo-Circle-inner" style="font-size:24px">80%</span>
         </Circle>
@@ -27,12 +44,13 @@
                 <Icon type="ios-close" size="50" style="color:#ff5500"></Icon>
             </span>
         </Circle>
-    </Space> -->
+    </Space>
 
 
 
 </template>
 <script>
+import {colors} from '@/assets/js/setting'
 // import Bar from '@/components/Bar.vue'
 // import Header from '@/components/Header.vue'
 // import Footer from '@/components/Footer.vue'
@@ -61,7 +79,18 @@ export default {
 					id:103,
 					txt: 'item3'
 				},
-			]
+			],
+			// colors: ['#000','#111','#222','#333','#444','#555','#666','#777','#888','#9992t'],
+			colors: colors,
+			activeClr:'',
+			activeData: {},
+			columns:[
+				{
+
+				}
+			],
+			data: [],
+			info:{}
 		}
     },
 	methods:{
@@ -72,7 +101,46 @@ export default {
 		},
 		btnSay(data){
 			console.log(data);
-		}
+		},
+		changeClr(color){
+			console.log(color);
+			this.activeClr = color;
+		},
+		info(){
+			this.activeData = {id:111}
+		},
+		getProduct(){
+			fetch('https://fakestoreapi.com/products',{
+				method:""
+			})
+			.than(res=>res.json())
+			.than(json=>{
+				this.info = json
+				// console.log(json)
+			})
+		},
+		show(index){
+
+		},
+		creatrd(){
+			// this.getProduct()
+		},
+		mounted(){},
 	}
 }
 </script>
+<style scoped lang="scss">
+.news{
+	text-align: center;
+	padding: 4rem;
+	background: #ddd;
+	img{
+		width: 100px;
+	}
+	button{
+		&.active{
+			border: 2px solid #fa0;
+		}
+	}
+}
+</style>
