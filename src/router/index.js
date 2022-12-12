@@ -23,9 +23,15 @@ const routes = [
     component: () => import('../views/BookingView.vue')
   },
   {
-    path: '/news',
+    path: '/news/:id',
     name: 'news',
-    component: () => import('../views/NewsView.vue')
+    component: () => import('@/views/NewsView.vue'),
+    // children: [
+    //   {
+    //     path: 'info',
+    //     component: () => import('@/views/NewsInfo.vue')
+    //   }
+    // ]
   },
   {
     path: '/shop',
@@ -36,6 +42,11 @@ const routes = [
     path: '/about',
     name: 'about',
     component: () => import('../views/AboutView.vue')
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: () => import('../views/TestView.vue')
   }
 ]
 
