@@ -23,26 +23,26 @@
 	<p class="font-16-15em">油谷灣 楊貴館：「春寒賜浴華清池，溫泉水滑洗凝脂。」位於可俯瞰日本海的油谷灣上，擁有著「美人の湯」美稱的溫泉，伴著絕色夕陽美景療癒您的身心。油谷灣 楊貴館：「春寒賜浴華清池，溫泉水滑洗凝脂。」位於可俯瞰日本海的油谷灣上，擁有著「美人の湯」美稱的溫泉，伴著絕色夕陽美景療癒您的身心。大谷山莊：從名為大谷屋初代旅館開始，創業以來已超過130年歷史。環繞川流的御影石造露天風呂，及散發著檜木香氣露天風呂，靜靜聆聽音信川潺潺流水聲十分療癒。
 	</p>
 	<p class="font-14">測試文字font-14</p>
+
+
+	<div class="page">
+		<Pagination />
+	</div>
 	
+
 </template>
 
 <script>
-// import Header from '@/components/Header.vue'
-// import Footer from '@/components/Footer.vue'
-
+import Pagination from '@/components/Pagination.vue'
 export default {
 	name: 'HomeView',
 	components: {
-		// Header,
-		// Footer
+		Pagination,
 	}
-}
+  }
 </script>
 
 <style lang="scss">
 @import 'src/assets/sass/style.scss';
 // @import 'src/assets/sass/base/_color.scss';
-	p{
-		color: $clr_gray_L1;
-	}
 </style>

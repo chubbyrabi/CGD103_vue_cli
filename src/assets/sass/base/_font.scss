@@ -44,3 +44,14 @@ $font-lh: 15, 24;
 	}
 }
 // font: font-weight font-size/line-height font-family;
+
+@mixin name {
+	font-weight: 700;
+	line-height: 1.2em;
+	letter-spacing: 0.15em;
+	text-align: justify;
+}
+
+.box{
+	@include name();
+}
