@@ -1,10 +1,7 @@
 <template>
 	<Header/>
-	<div class="shop clr-gray333 font fontSize48">
-		<h1>This is an page</h1>
-	</div>
+		<div class="main"><router-view/></div>
 	<Footer/>
-	<router-view/>
 </template>
 
 <script>
@@ -32,5 +29,9 @@ export default {
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	// color: #2c3e50;
+}
+.main{
+	max-width: 1200px;
+	margin: auto;
 }
 </style>

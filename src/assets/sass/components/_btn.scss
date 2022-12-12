@@ -12,34 +12,6 @@
 // 要用到按鈕的頁面引入這個(路徑可能要改) @import "./assets/sass/components/btn";
 // 然後直接套上面的 class 名稱就可以了
 
-// 藍色系
-$clr_blue_L0: #2D3740;
-$clr_blue_L1: #0C3B59; // main
-$clr_blue_L2: #4F6573;
-$clr_blue_L3: #A3AFBF;
-$clr_blue_L4: #E2E9F2; 
-
-// 土色系
-$clr_gold_L0: #CC8D1B;
-$clr_gold_L1: #BC955C; // main
-$clr_gold_L2: #D7BF9D;
-$clr_gold_L3: #EBDFCE;
-
-// 灰階
-$clr_gray_L1: #444444; // 主要文字 ex.標題 內文
-$clr_gray_L2: #888888; // 次要文字 ex.圖片敘述 消息摘要 內文
-$clr_gray_L3: #cccccc; // 輔助文字 ex.輸入框提示字
-$clr_gray_L4: #E6E6E6; // disabled
-$clr_gray_L5: #F8F8F8;
-$clr_fff: #FFFFFF;
-
-// 提示
-$clr_success: #6C9255; // 正確/成功
-$clr_warning: #EFA828; // 異常/警告
-$clr_danger:  #941111; // 錯誤/刪除
-
-
-
 // transition
 $trs: 0.2s;
 
@@ -150,7 +122,7 @@ $btn-type:
         border-radius: 8px;
         outline: 3px solid $focus;
     }
-    :focus:not(:focus-visible){
+    &:focus:not(:focus-visible){
         outline: none;
     }
     &:disabled{
@@ -177,7 +149,7 @@ $btn-type:
         border-radius: 8px;
         outline: 3px solid $focus;
     }
-    :focus:not(:focus-visible){
+    &:focus:not(:focus-visible){
         outline: none;
     }
     &:disabled{
@@ -242,7 +214,7 @@ $btn-type:
         border-radius: 8px;
         outline: 3px solid darken($btn-clr, 10);
     }
-    :focus:not(:focus-visible){
+    &:focus:not(:focus-visible){
         outline: none;
     }
     &:disabled{
@@ -270,7 +242,7 @@ $btn-type:
         border-radius: 8px;
         outline: 3px solid darken($btn-clr, 10);
     }
-    :focus:not(:focus-visible){
+    &:focus:not(:focus-visible){
         outline: none;
     }
     &:disabled{
@@ -295,4 +267,60 @@ $btn-type:
 // 按鈕:白底紅框
 .btn-danger_2nd{
     @include btn-plain_2nd($clr_danger);
+}
+
+// input(暫)
+%input-style{
+    vertical-align: top;
+    appearance: none;
+    outline: none;
+    @include btnPadding(10, 10);
+    @include btnFont(600, 16){
+        font-family: 'Noto Serif TC';
+        letter-spacing: 0.1em;
+        color: $clr_gray_L1;
+    }
+    &::placeholder{
+        color: $clr_gray_L2;
+        opacity: .8;
+    }
+    &:disabled{
+        background: $clr_gray_L4;
+    }
+}
+
+@mixin inputClr($inputClr){
+    @include border(1px, $inputClr, 10px);
+    &:active{
+        border-color: $inputClr;
+    }
+    &:focus{
+        border-color: $inputClr;
+    }
+    @content;
+}
+
+$input-type: 'blue', 'gold', 'danger';
+
+@each $type in $input-type{
+    .input-#{$type}{
+        @extend %input-style;
+    }
+}
+
+.input-blue{
+    @include inputClr($clr_blue_L1);
+}
+.input-gold{
+    @include inputClr($clr_gold_L1);
+}
+.input-danger{
+    @include inputClr($clr_danger){
+        &::placeholder{
+            color: $clr_danger
+        }
+        &::after{
+            content: '123'
+        }
+    };
 }

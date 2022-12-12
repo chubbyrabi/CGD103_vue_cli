@@ -1,5 +1,5 @@
 <template>
-	{{$route.params}}
+	<!-- {{$route.params}} -->
 		<div class="news clr-gray333 font fontSize48">
 			<h1>This is an news page</h1>
 		</div>
@@ -31,7 +31,7 @@
 			>{{i}}</button>
 		</div>
 
-
+<!-- 
 		<Space wrap>
         <Circle :percent="80">
             <span class="demo-Circle-inner" style="font-size:24px">80%</span>
@@ -44,13 +44,13 @@
                 <Icon type="ios-close" size="50" style="color:#ff5500"></Icon>
             </span>
         </Circle>
-    </Space>
+    </Space> -->
 
 
 
 </template>
 <script>
-import {colors} from '@/assets/js/setting'
+// import {colors} from '@/assets/js/setting'
 // import Bar from '@/components/Bar.vue'
 // import Header from '@/components/Header.vue'
 // import Footer from '@/components/Footer.vue'
@@ -80,8 +80,8 @@ export default {
 					txt: 'item3'
 				},
 			],
-			// colors: ['#000','#111','#222','#333','#444','#555','#666','#777','#888','#9992t'],
-			colors: colors,
+			colors: ['#000','#111','#222','#333','#444','#555','#666','#777','#888','#9992t'],
+			// colors: colors,
 			activeClr:'',
 			activeData: {},
 			columns:[
@@ -110,23 +110,37 @@ export default {
 			this.activeData = {id:111}
 		},
 		getProduct(){
-			fetch('https://fakestoreapi.com/products',{
-				method:""
-			})
-			.than(res=>res.json())
-			.than(json=>{
-				this.info = json
-				// console.log(json)
-			})
+			
+			fetch('https://fakestoreapi.com/products')
+			.then(res=>res.json())
+			.then(json=>{ this.info = json })
+
+
+			// fetch('https://fakestoreapi.com/products')
+			// .then(res=>res.json())
+			// .then(json=>console.log(json))
+
+			// this.load = true
+            //         fetch('https://fakestoreapi.com/products')
+            //         .then(res=>res.json())
+            //         .then(json=>{
+            //             this.source = json
+            //             // this.product = json
+            //             //初始化商品數量
+            //             for ( item in this.product) {
+            //                 this.count.push(0)
+            //             }
+            //             this.load = false
+            //         })
 		},
-		show(index){
+		show(){
 
 		},
-		creatrd(){
-			// this.getProduct()
-		},
-		mounted(){},
-	}
+	},
+	created(){
+		this.getProduct();
+	},
+	mounted(){},
 }
 </script>
 <style scoped lang="scss">

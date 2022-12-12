@@ -6,3 +6,16 @@ body{
     /* font-size: 0; */
     /* 去除各種間隙與 h1(logo) 文字 */
 }
+
+$maxW: 1200px;
+
+// .hvrStyle{
+//     color: $clr_gray_L1;
+//     fill: $clr_gray_L1;
+//     transition: 0.3s;
+//     &:hover{
+//         color: $clr_blue_L3;
+//         fill: $clr_blue_L3;
+//         transition: 0.3s;
+//     }
+// }

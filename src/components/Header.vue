@@ -9,7 +9,7 @@
                     </svg>
                 </router-link>
             </h1>
-            <ul class="nav-list font-16-15em">
+            <!-- <ul class="nav-list font-16-15em">
                 <li>
                     <router-link to="/trains">列車介紹</router-link>
                 </li>
@@ -28,10 +28,17 @@
                 <li>
                     <router-link to="/about">關於我們</router-link>
                 </li>
+            </ul> -->
+            <ul class="nav-list font-16-15em" :class="toggle?'show':''">
+                <li v-for="item in items" :key="item">
+                    <router-link  class="go" :to ="{path:item['sourc']}">{{item['name']}}</router-link>
+                </li>
             </ul>
             <div>
-                <span class="material-symbols-outlined">person</span>
-                <span class="material-symbols-outlined">shopping_cart</span>
+                <i class="icon material-symbols-outlined">&#xe7fd;</i>
+                <i class="icon material-symbols-outlined">&#xe8cc;</i>
+                <!-- <span class="icon material-symbols-outlined">person</span> -->
+                <!-- <span class="icon material-symbols-outlined">shopping_cart</span> -->
                 <!-- <div class="nav-hb hvr-pointer js-click">
                     <span></span>
                     <span></span>
@@ -46,7 +53,6 @@
 <style lang="scss">
 @import "src/assets/sass/base/font";
 @import "src/assets/sass/base/color";
-
 .nav-logo svg, .nav-list li{
     color: $clr_gray_L1;
     fill: $clr_gray_L1;
@@ -57,11 +63,27 @@
     fill: $clr_blue_L3;
     transition: 0.3s;
 }
-
 </style>
 
 <script>
+    import common from "@/assets/js/common.js"
     export default {
         name: 'Header',
+        props: {
+
+        },
+        data(){
+            return{
+                items:[
+                    { name:'列車介紹', sourc:'train' },
+                    { name:'行程介紹', sourc:'travel' },
+                    { name:'預約報名', sourc:'booking' },
+                    { name:'消息專區', sourc:'news' },
+                    { name:'線上商城', sourc:'shop' },
+                    { name:'關於我們', sourc:'about' }
+                ],
+                toggle: false,
+            }
+        }
     }
 </script>

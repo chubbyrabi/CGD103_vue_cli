@@ -1,0 +1,32 @@
+@mixin hvrStyle ($clr, $hvrClr, $trs){
+    color: $clr;
+    fill: $clr;
+    transition: $trs;
+    &:hover{
+        color: $hvrClr;
+        fill: $hvrClr;
+        transition: $trs;
+    }
+}
+
+.main-nav{
+    max-width: $maxW;
+    .nav-logo{
+
+    }
+    .nav-list{
+
+    }
+    .icon{
+
+    }
+    svg, li, .icon{
+        cursor: pointer;
+        @include hvrStyle($clr_gray_L1, $clr_blue_L3, 0.3s)
+    }
+}
+
+header.js-hd-shadow{
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
